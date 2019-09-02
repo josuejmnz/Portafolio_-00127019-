@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	int i;
+	int j;
+	int fila = 0;
+	int columna = 0;
+
+	cout << "ingrese el numero de filas de la matriz: ";
+	cin >> fila;
+	cout << "ingrese el numero de columnas de la matriz: ";
+	cin >> columna;
+
+	for ( i = 0; i <= fila; i++) {
+		for (j = 0; j <= columna; j++) {
+			if (i <= j) {
+				cout << i << j << " ";
+			}
+			else {
+				cout << "00 " ;
+			}
+		} cout << endl;
+	}
+return 0;
+}
