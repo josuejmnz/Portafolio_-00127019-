@@ -1,0 +1,146 @@
+Ejercio 12
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	int num, sobra, numInvert = 0;
+
+	cout << "Ingrese un numero:";
+	cin >> num;
+
+
+	while (num > 0) {
+		sobra = num % 10;
+		num = num / 10;
+		numInvert = numInvert * 10 + sobra;
+	}
+	cout << "Su nuevo número es" << numInvert;
+
+	return 0;
+}
+
+
+Ejercio 17
+
+#include<iostream>
+using namespace std;
+
+
+int main(void) {
+
+	int array[10];
+	int i;
+	cout << "Digite 10 números " << endl;
+	for (i = 0; i < 10; i++) {
+		cout << "arreglo[" << i << "]: ";
+		cin >> array[i];
+	}
+
+	float sum = 0;
+	i = 0;
+	int n = 10;
+	float prom = 0;
+
+	while (i < 10) {
+		sum = sum + array[i];
+		i++;
+
+
+		prom = sum / n;
+
+
+	}
+
+	cout << "La suma es: " << sum << endl;
+
+	cout << "El promedio es: " << prom << endl;
+
+	return 0;
+
+}
+
+
+
+Ejercicio 18
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	int i;
+	int j;
+	int fila = 0;
+	int columna = 0;
+
+	cout << "ingrese el numero de filas de la matriz: ";
+	cin >> fila;
+	cout << "ingrese el numero de columnas de la matriz: ";
+	cin >> columna;
+
+
+	for ( i = 0; i <= fila; i++) {
+		for (j = 0; j <= columna; j++) {
+			if (i <= j) {
+				cout << i << j << " ";
+			}
+			else {
+				cout << "00 " ;
+			}
+
+		} cout << endl;
+	}
+
+
+
+
+return 0;
+
+}
+
+
+Ejercicio 23
+
+# include <iostream>
+# include <stdlib.h>
+using namespace std;
+
+void sumaComplejos(int, int, int, int, int&, int&);
+
+int main()
+{
+	int Real[3];
+	int Imaginario[3];
+	int resulReal;
+	int resulIma;
+	char* numeros[] = { "Primer" , "Segundo" , "Tercer" };
+
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "\n Parte Real del " << numeros[i] << " Numero : ";
+		cin >> Real[i];
+		cout << "\n Parte Imaginaria del " << numeros[i] << " Numero : ";
+		cin >> Imaginario[i];
+	}
+
+	sumaComplejos(Real[0], Imaginario[0], Real[1], Imaginario[1], resulReal, resulIma);
+
+	sumaComplejos(resulReal, resulIma, Real[2], Imaginario[2], resulReal, resulIma);
+
+	cout << "\n Resultado Parte Real : " << resulReal;
+	cout << "\n Resultado Parte Imaginaria : " << resulIma;
+
+	return 0;
+}
+
+void sumaComplejos(int real1, int ima1, int real2, int ima2, int& rReal, int& rIma)
+{
+	rReal = real1 + real2;
+	rIma = ima1 + ima2;
+}
+
+
