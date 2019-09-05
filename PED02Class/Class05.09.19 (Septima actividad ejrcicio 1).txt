@@ -1,0 +1,31 @@
+elementos = 10
+valid = true
+segundoDato = 0
+
+while(hasta sacar e segundo elemento){
+	if(empty (s)){
+		valid false
+		break
+
+	}
+	
+	if  (!empty (s)){
+		valid true
+		i = pop(s)
+	}
+
+	if (!empty (s)){
+		valid true
+		segundoDato = pop(s)
+		break	
+}
+
+
+-------------------------------------------
+
+
+
+
+
+
+
